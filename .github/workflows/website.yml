@@ -9,4 +9,4 @@ jobs:
 
     steps:
     - name: Dump github context
-      run: echo ${{ toJSON(github) }}
+      run: echo "${{ toJSON(github.event) }}"

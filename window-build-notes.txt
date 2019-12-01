@@ -1,0 +1,43 @@
+# Building enchant
+
+* Install msys2
+* Install base-devel ...
+* Additional packages:
+   * git
+* Patches:
+  * Fix .gitmodules to use github mirrors for gnu stuff (savannah was down :/)
+   
+* Run ./build-aux/appveyor-install.sh
+
+## Questions:
+
+
+Is there a list of pacman packages somewhere?
+Why is there a `&&` after the creation of the readme symlink?
+Why not set -e at the top of build-aux/appveyor-install ?
+Why can't we use the hunspell upstream package directly ?
+  (check with pacman -L)
+  
+Can install msys2 with chocolatey
+
+# Packaging pyenchant
+
+pyenchant builds enchant with:
+ * some patches
+ * ispell and hunspell, but not aspell - upstream only builds with hunspell
+ * there's some code to put the enchant dll inside the wheel, not sure it works
+ 
+ Ideas:
+ * Write a MAKEPKG for enchant & hunspel, install them with pacman at the start of the pyenchant build!
+ 
+
+Stuff in the wheel:
+
+enchant/iconv.dll
+enchant/intl.dll
+enchant/libenchant-1.dll
+enchant/libglib-2.0-0.dll
+enchant/libgmodule-2.0-0.dll
+enchant/lib/enchant/libenchant_ispell.dll
+enchant/lib/enchant/libenchant_myspell.dll
+enchant/share/myspell/{*.aff, *.dic}

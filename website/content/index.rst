@@ -14,7 +14,7 @@ To get started, check out the comprehensive :doc:`tutorial<tutorial>` or the aut
     False
     >>> d.suggest("Helo")
     ['He lo', 'He-lo', 'Hello', 'Helot', 'Help', 'Halo', 'Hell', 'Held', 'Helm', 'Hero', "He'll"]
-    >>> 
+    >>>
 
 
 
@@ -26,4 +26,5 @@ Documentation Index
 
    tutorial.rst
    api/index.rst
+   faq.rst
 

@@ -33,3 +33,4 @@ Documentation Index
    tutorial.rst
    api/index.rst
    faq.rst
+   shootout.rst
